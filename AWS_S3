@@ -1,0 +1,18 @@
+provider "aws" {
+  region    = "us-east-1"
+  access_key = "AKIAZCUIUJN45ZAQSCMR"
+  secret_key = "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"
+}
+
+resource "aws_s3_bucket" "bucketfeb16" {
+  bucket = "bucketawssimple"
+  acl    = "private"
+  versioning {
+    enabled = true
+  }
+
+  tags = {
+    name = "bucketfeb16"
+  }
+
+}
