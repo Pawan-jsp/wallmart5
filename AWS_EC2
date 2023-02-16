@@ -25,3 +25,13 @@ resource "aws_instance" "RedHat"{
   }
 
 }
+
+output "aws_public_ip" {
+    description = "Getting the EC2 Instance public IP address.."
+    value = "${aws_instance.AWSEC2Instance.public_ip}"  
+}
+
+output "aws_private_ip" {
+    description = "Getting the EC2 Instance public IP address.."
+    value = "${aws_instance.AWSEC2Instance.private_ip}"  
+}
